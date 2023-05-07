@@ -17,6 +17,19 @@ body, p {
     background-color:aquamarine;
 }
 
+.form-container .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 25px;
+    padding-bottom: 35px;
+}
+
+.form-container .text .main-text {
+    width: 430px;
+    padding-bottom: 15px;
+}
+
 form div {
     display: flex;
     flex-direction: column;
@@ -28,10 +41,20 @@ form {
     grid-template-rows:    repeat(3, 60px);
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 70px;
-    padding:  10px 0px;
     padding-left: 25px;
     padding-right: 100%;
     background-color: rgb(135, 135, 253);
+}
+
+.form-container .button {
+    padding-top: 40px;
+    padding-left: 25px;
+}
+
+.form-container button {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 .img-container {
