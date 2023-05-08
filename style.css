@@ -1,3 +1,7 @@
+html {
+    background: rgb(213 150 95);
+}
+
 body, p ,button {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -13,6 +17,7 @@ form label {
 .container {
     display: flex;
     height: 100vh;
+    width: 100%;
     overflow: auto;
 }
 
@@ -34,6 +39,16 @@ form label {
     padding-bottom: 85px;
     width: 80%;
     color: #eef4ff;
+    animation: opacityIN_delayed 3s;
+}
+
+@keyframes opacityIN_delayed {
+    0% { opacity: 0;
+    }
+    40% { opacity: 0;
+    }
+    100% { opacity: 1;
+    }
 }
 
 .form-container .text .main-text {
@@ -45,6 +60,7 @@ form div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: filter 0.25s  ease-out;
 }
 
 form {
@@ -52,14 +68,20 @@ form {
     grid-template-rows:    repeat(3, 60px);
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 70px;
-    padding: 15px 100% 15px 45px;
+    padding: 15px 45vw 15px 45px;
     background: linear-gradient(90deg, rgb(148 148 175) 0%, rgb(249 172 104) 25%);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    animation: opacityIN_delayed 4s;
+}
+
+form div:hover {
+    filter: brightness(1.15);
 }
 
 .form-container .button {
     padding-top: 35px;
     padding-left: 45px;
+    animation: opacityIN_delayed 5s;
 }
 
 .form-container button {
@@ -72,6 +94,13 @@ form {
     border: 0px;
     border-radius: 5px;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: scale 0.15s ease-out, filter 0.25s  ease-out;
+}
+
+button:hover {
+    /* background-color: #5989d3; */
+    filter: brightness(1.2);
+    scale: 1.03;
 }
 
 .form-container .button-subtext {
@@ -87,6 +116,31 @@ form {
     flex: 1 1 0;
     max-height: inherit;
     position: relative;
+    overflow: hidden;
+    background-color: rgb(128 128 149);
+}
+
+.img-container .img-div {
+    width: 100%;
+}
+
+img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    animation: imageIN 2s forwards;
+    animation-timing-function: cubic-bezier(0.29, 0.28, 0.17, 1);
+}
+
+@keyframes imageIN {
+    0% { height: 150vh;
+        translate: 0px 0px;
+        opacity: 0;
+    }
+    100% {  height: 150vh;
+        translate: 0px -380px;
+        opacity: 1;
+    }
 }
 
 .img-container p {
@@ -97,12 +151,15 @@ form {
     bottom: 1vh;
     font-size: 2vh;
     color: #edb650;
+    z-index: 1;
+    animation: opacityIN 5s;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@keyframes opacityIN {
+    0% { opacity: 0;
+    }
+    100% { opacity: 1;
+    }
 }
 
 a {
@@ -124,7 +181,7 @@ input:focus {
     box-shadow: 0 0 5px 2px #506c97b6;
 }
 
-input:invalid {
+input:focus:invalid {
     color: #e55555;
     border: 2px solid #e55555;
     box-shadow: 0 0 5px rgb(225 83 83 / 75%);
