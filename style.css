@@ -13,7 +13,7 @@ form label {
 .container {
     display: flex;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .form-container {
@@ -54,6 +54,7 @@ form {
     grid-column-gap: 70px;
     padding: 15px 100% 15px 45px;
     background: linear-gradient(90deg, rgb(148 148 175) 0%, rgb(249 172 104) 25%);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .form-container .button {
@@ -70,6 +71,7 @@ form {
     background-color: #506c97;
     border: 0px;
     border-radius: 5px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35);
 }
 
 .form-container .button-subtext {
