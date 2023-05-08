@@ -7,6 +7,7 @@ body, p ,button {
 form label {
     font-size: 15px;
     color: #27406e;
+    margin-bottom: 4px;
 }
 
 .container {
@@ -32,7 +33,7 @@ form label {
     padding-left: 45px;
     padding-bottom: 85px;
     width: 80%;
-    color: #eef4ff
+    color: #eef4ff;
 }
 
 .form-container .text .main-text {
@@ -65,13 +66,19 @@ form {
     height: 40px;
     margin-bottom: 10px;
     font-size: 16px;
-    color: #2b3608;
-    background-color: #b8cd7a;
+    color: #ebdbe5;
+    background-color: #506c97;
+    border: 0px;
+    border-radius: 5px;
 }
 
 .form-container .button-subtext {
     font-size: 16px;
     color: #eef4ff;
+}
+
+.form-container .button-subtext span {
+    color: rgb(80 108 151);
 }
 
 .img-container {
@@ -101,3 +108,26 @@ a {
     font-size: 2.5vh;
     color: #eacc50;
 }
+
+input {
+    color: #061c3e;
+    background-color: #ebdbe5;
+    border: 2px solid #506c97;
+    border-radius: 2px;
+    padding: 3px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #506c97b6;
+}
+
+input:invalid {
+    color: #e55555;
+    border: 2px solid #e55555;
+    box-shadow: 0 0 5px rgb(225 83 83 / 75%);
+}
+
+/* input:required {
+    box-shadow: 3px 3px 5px rgba(255, 0, 0, 0.5);
+} */
